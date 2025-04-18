@@ -1,0 +1,116 @@
+.seat-map-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: inline-block; /* prevents full-width stretch */
+    border: 1px solid black; /* thin black border */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* optional: subtle shadow */
+    background-color: #DAE8C7; /* keeps background clean */
+  }
+  
+  
+  .legend {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+  }
+  
+  .legend .seat {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    font-size: 0; /* hide any number */
+    pointer-events: none;
+  }
+  
+    
+  /* Main layout */
+  .seat-map {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black; /* Thin black border around entire map */
+    padding: 4px; /* Optional: for a little space between seats and border */
+    background-color: white; /* Optional: keeps background clean inside border */
+  }
+  
+  .seat-row {
+    display: flex;
+  }
+  
+  /* Seat base */
+  .seat {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    box-sizing: border-box;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Seat types */
+  .seat.vacant {
+    background-color: white;
+    color: black;
+  }
+  
+  .seat.team-vacant {
+    background-color: green;
+    color: white;
+  }
+  
+  .seat.reserved {
+    background-color: grey;
+    color: white;
+  }
+  
+  .seat.space {
+    background-color: white;
+    border: none;
+    pointer-events: none;
+  }
+  
+  .seat.cabin {
+    background-color: #555;
+    pointer-events: none;
+    border: none;
+    cursor: default;
+    box-shadow: 0 0 0 2px #555; /* fills the margin with color */
+    border-radius: 0px;
+  }
+  
+  .seat.walkway {
+    background-color: #bbb;
+    pointer-events: none;
+    border: none;
+    cursor: default;
+    box-shadow: 0 0 0 2px #bbb;
+    border-radius: 0px;
+  }
+
+  .seat.selected {
+    background-color: cyan;
+    border: 2px solid #00bcd4;
+  }
+
+  .vacant:hover {
+    background-color: palegreen;
+  }
+
+  .team-vacant:hover {
+    background-color: darkgreen;
+  }
+
+  
